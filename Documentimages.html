@@ -6,13 +6,24 @@
     <title>Número diferente de imagenes</title>
 </head>
 <body>
-    <figure>
-        <img name="img1" src="" border=0 width=200 height=150 style="background-color:blueviolet;"/>
-    </figure>
+
+    
+    <img name="myImg" src="images/estrategia3.jpg" alt="images" width="152" height="128">
+   
+    
+    <p>Click the button to display the URL of the img element with id="myImg".</p>
+    
+    <button onclick="myFunction()">Try it</button>
+    
+    <p id="demo"></p>
+    
     <script>
-        var myImages = new Array("images/estrategia.jpg","images/estrategia2.jpg","images/estrategia3.jpg", "images/carrygo.jpg");
-        var imgIndex = prompt("Enter a number from 0 to 3","");
-        document.images["imag1"].src = myImages[imgIndex];
+    function myFunction() {
+      var myImages = new Array("images/estrategia.jpg","images/estrategia2.jpg","images/estrategia3.jpg", "images/carrygo.jpg");
+            var imgIndex = prompt("Enter a number from 0 to 3","");
+            document.images["myImg"].src = myImages[imgIndex];
+    }
     </script>
-</body>
+    
+    </body>
 </html>
