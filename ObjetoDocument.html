@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de objeto screen</title>
+</head>
+<body>
+    <script>
+        switch (windows.screen.colorDepth)
+        {
+            case 1: case 4:
+                document.bgColor = "white";
+                break;
+            case 8: case 15: case 16:
+                document.bgColor = "blue";
+                break;
+            case 24: case 32: 
+                document.bgColor = "skyblue";
+                break;
+            default:
+                document.bg.Color = "white";
+        }
+        document.write("Su pantalla soporta color de "+ windows.screen.colorDepth + "bit");
+    </script>
+    
+</body>
+</html>
