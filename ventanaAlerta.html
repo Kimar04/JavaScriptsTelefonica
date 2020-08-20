@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de eventos</title>
+</head>
+<body>
+    <script>
+        function linkSomePage_onclick() {
+            alert('Este enlace no lleva a ninguna parte');
+            return false;
+        }
+    </script>
+    <a href="somepage.htm" name="linkSomePage_onclick">
+        Pincha aquí
+    </a>
+    <script>
+        window.document.links[0].onclick = linkSomePage_onclick;
+    </script>
+</body>
+</html>
