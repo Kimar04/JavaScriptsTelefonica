@@ -12,10 +12,13 @@
             return false;
         }
     </script>
-    <a href="somepage.htm" name="linkSomePage_onclick">
+    <a href="somepage.htm" >
         Pincha aquí
     </a>
+    <br>
+    <a href="#" name="linkSomePage_onclick">Vacio</a>
     <script>
+        window.document.links["linkSomePage_onclick"].onclick = linkSomePage_onclick;
         window.document.links[0].onclick = linkSomePage_onclick;
     </script>
 </body>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagen aleatoria</title>
+    <script>
+        var myImages = new Array("images/estrategia.jpg","images/estrategia2.jpg","images/estrategia3.jpg", "images/carrygo.jpg");
+    function changeImg(imgNumber){
+        var imgClicked = document.images[imgNumber];
+        var newImagenNumber = Math.round(Math.random()*3);
+
+        while (imgClicked.src.idexOf(myImages[newImagenNumber])!= -1){
+            newImagenNumber = Math.round(Math.random()*3);
+        }
+        consolelog(newImagenNumber);
+        imgClicked.src = myImages[newImagenNumber];
+        return false;
+    }
+    </script>
+</head>
+<body>
+    <a href="" name="linkImg1" onclick="return changueImg(0)">
+        <img name="img1" src="images/estrategia.jpg" alt="" border=1px width=180px height=auto/>
+    </a>
+    <a href="" name="linkImg2" onclick="return changueImg(1)">
+        <img name="img2" src="images/estrategia2.jpg" alt="" border=1px width=180px height=auto />
+    </a>
+  
+</body>
+</html>
