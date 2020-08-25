@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto navigator</title>
+    <script>
+        <!--
+        function getBrowserName(){
+            var lsBrowser = navigator.appName;
+            if (lsBrowser.indexOf("Microsoft") >= 0){
+                lsBrowser = "MSIE";
+            }
+            else if (lsBrowser.indexOf("NETSCAPE") >= 0) {
+                lsBrowser = "NETSCAPE";
+            }
+            else {
+                lsBrowser = "UNKNOWN";
+            }
+            return lsBrowser;
+
+        }
+
+
+        function getOS() {
+            var userPlat = "unkonown";
+            var navInfo = navigator.userAgent;
+            if ((navInfo.indexOf("windows NT") != -1) || (navInfo.indexOf("windows 95") != -1) || (navInfo.indexOf("windows 98") != -1) || (navInfo.indexOf("winNT") != -1) || (navInfo.indexOf("win95") != -1) || (navInfo.indexOf("win98") != -1)) {
+                userPlat = "Win32";
+            }
+            else if (navInfo.indexof("Win16") != -1){
+                userPlat = "Win16";
+            }
+            else if (navInfo.indexof("Macintosh") != -1){
+                userPlat = "PPC";
+            }
+            else if (navInfo.indexof("68k") != -1){
+                userPlat = "68k";
+            }
+            return userPlat;
+        }
+        function getBrowserVersion() {
+            var findIndex;
+            var browserVersion = 0;
+            var browser = getBrowserName;
+            if (browser == "MSIE") {
+                brouserVersion = navigator.userAgent;
+                findIndex = brouserVersion.indexOf(browser) + 5;
+                browserVersion = parseInt(browser.Version.substring(findIndex,findIndex + 1));
+            }
+            else {
+                browserVersion = parseInt(navigator.appVerssion.substring(0.1));
+            }
+            return browserVersion;
+        }
+      -->
+    </script>
+</head>
+<body>
+    <script>
+        <!--
+        var userOS = getOS();
+        var browserName = getBrowserName();
+        var browserVersion = getBrowserVersion();
+        if (browserVersion < 4 || browserName == "UNKNOWN" || userOS == "win16") {
+            document.write("<h2>Sorry this browser version is not supported<h2>");
+        }
+        else if (browserName == "NETSCAPE"){
+            location.replace("NetscapePage.html");
+        }
+        else {
+            location.replace("MSIEPage.html");
+        }
+        -->
+    </script>
+    <noscript>
+        <h2>
+            Esta página requiere un navegador que soporte Javascripts
+        </h2>
+    </noscript>
+</body>
+</html>
