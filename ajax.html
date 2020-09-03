@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax</title>
+    <script>
+        function loadXMLDoc()
+        {
+        var xmlhttp;
+        if (window.XMLHttpRequest)
+            {// code for IE/+, Firefox, Chrome, Opera, Safari
+                xmlhttp=new XMLHttpRequest();
+
+            }
+        else
+            {
+                //code IE6, IE5
+                xmlhttp=new ActiveXObject("microsoft,XMLHTTP");
+            }
+        xmlhttp.onreadystatechange=function()
+            {
+            if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+                }
+
+            }
+        xmlhttp.open("Get","ajas.txt",true);
+        xmlhttp.send();
+        }   
+    </script>
+</head>
+<body>
+    <div id="myDiv">
+        <h2>
+            let AJAX change this text
+        </h2>
+    </div>
+    <button type="button" onclick="loadXMLDoc()">Changue Content</button>
+</body>
+</html>
